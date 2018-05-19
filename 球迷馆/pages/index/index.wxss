@@ -1,0 +1,129 @@
+/**index.wxss**/
+
+page{ 
+  background-color: #C4C4C4;
+}  
+.navbar{  
+  flex: none;  
+  display: flex;  
+  background: #fff;  
+  padding: 2%;
+}  
+.navbar .item{  
+  font-size: 0.8rem;
+  position: relative;  
+  flex: auto;  
+  text-align: center;  
+  line-height: 80rpx;
+  color: #4A4A4A;  
+}  
+.navbar .item.active{  
+  color: #EF3B31;  
+}  
+.navbar .item.active:after{  
+  content: "";  
+  display: block;  
+  position: absolute;  
+  top: 70rpx;  
+  left: 47%;
+  width: 15rpx; 
+  height: 15rpx;
+  border-radius: 50%; 
+  background: #EF3B31;  
+}  
+.box {
+font-size: 16px;
+font-family: PingFangSC-Regular;
+width: 100%;
+height: 12.9%;
+background-color: #ffffff;
+margin-top: 1.2%;
+}
+#match_name{
+margin-left: 2%;
+}
+#start_time {
+  font-weight:200;
+  font-size: 14px;
+  color: #9b9b9b;
+  padding: 6%;
+}
+#proceed_time {
+  font-weight:205;
+  color: #F2625A;
+  padding-left: 5%; 
+} 
+.odds {
+  font-weight:300;
+  padding-left:38.5%; 
+  color: #9b9b9b;
+  font-size: 17px;
+}
+#score {
+  position: absolute;
+  color: #EF3B31;
+  left: 41.4%;
+  font-size: 18px;
+}
+#main_culb {
+  font-size: 14px;
+  float: right;
+  color: #4A4A4A;
+  margin-right: 61.5%;
+  margin-top: 3px;
+}
+#guest_club {
+  position: absolute;
+  left: 54%;
+  color: #4A4A4A;
+  font-size: 14px;
+  margin-top: 3px;
+}
+#mainViolationCount{
+  position: relative;
+  float: left;
+  margin-left: 4%;
+  font-size: 13px;
+  margin-top: 4px;
+  color: white;
+  border-radius: 20%;
+  width: 10px;
+  text-align: center;
+  background-color: #FF8A8A; 
+}
+#guestviolationCount{
+  position: absolute;
+  right: 9%;
+  font-size: 13px;
+  margin-top: 4px;
+  color: white;
+  border-radius: 20%;
+  width: 10px;
+  text-align: center;
+  background-color: #FDC223;
+}
+.star_img{
+  position: absolute;
+  right: 2%;
+  width: 20px;
+  height: 20px;
+  margin-top: 3px;
+}
+#half_count{
+  font-size: 13px;
+  margin-left: 32%;
+  color: #9B9B9B;
+}
+#corner_all{
+  font-size: 13px;
+  margin-left: 3%;
+  color: #9B9B9B;
+}
+.left_frame{
+  position: absolute;
+  left: 0;
+  width: 1.1%;
+  height: 12%;
+  margin-top: 1%;
+  background-color: #EF3B31;
+}
