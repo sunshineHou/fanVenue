@@ -1,1 +1,133 @@
-/* pages/match_timetable/match_timetable.wxss */
+   /* pages/match_timetable/match_timetable.wxss */
+page{ 
+  background-color: white;
+}  
+.navbar{  
+  flex: none;  
+  display: flex;  
+  background: white;  
+  padding: 2%;
+}  
+.item_0 {
+  position: relative;
+  top:20rpx 
+}
+.navbar .item{  
+  font-size: 35rpx;
+  position: relative;  
+  bottom: 3rpx;
+  flex: auto;  
+  text-align: center;  
+  color: #9B9B9B;  
+}  
+.navbar .item.active{  
+  color: #EF3B31;  
+}  
+.navbar .item.active:after{  
+  content: "";  
+  display: block;  
+  position: absolute;  
+  top: 90rpx;  
+  left: 37%;
+  width: 16rpx; 
+  height: 16rpx;
+  border-radius: 50%; 
+  background: #EF3B31;  
+}  
+.icon_date {
+  position: absolute;
+  top: 30rpx;
+  right: 30rpx;
+  width: 50rpx;
+  height: 50rpx
+}
+.content_box {
+font-size: 16px;
+font-family: PingFangSC-Regular;
+width: 100%;
+height: 12.9%;
+background-color: #ffffff;
+top: 1.2%;
+}
+#match_name{
+  position: relative;
+  top:8rpx;
+  font-size: 30rpx;
+  color: #4A4A4A;
+  margin-left: 2%;
+}
+#start_time {
+  position: relative;
+  top:8rpx;
+  font-weight:250;
+  font-size: 30rpx;
+  color: #9b9b9b;
+  padding-left: 6%;
+}
+#proceed_time {
+  position: relative;
+  top:8rpx;
+  font-weight:205;
+  font-size: 30rpx;
+  color: #9B9B9B;
+  padding-left: 14%; 
+} 
+#main_culb {
+  font-size: 14px;
+  float: right;
+  color: #4A4A4A;
+  text-align: right;
+  margin-right: 61.5%;
+  margin-top: 7%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+  width: 28%;
+}
+#guest_club {
+  position: absolute;
+  left: 54%;
+  color: #4A4A4A;
+  font-size: 14px;
+  margin-top: 7%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+  width: 30%;
+}
+#vs_s {
+  position: absolute;
+  top: 23%;
+  left: 43%;
+  font-size: 50rpx;
+  color: #DDDDDD;
+}
+.star_img{
+  position: absolute;
+  right: 2%;
+  width: 20px;
+  height: 20px;
+  margin-top: 3px;
+}
+.frame_top {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0.8%;
+  background-color: #DCDCDC;
+}
+.left_frame{
+  position: absolute;
+  left: 0;
+  width: 0.8%;
+  height: 12%;
+  margin-top: 3%;
+  background-color: #EF3B31;
+}
+#jump_lable {
+  position: absolute;
+  top: 15%;
+  right: 2%;
+  font-size: 50rpx;
+  color: #DDDDDD
+}

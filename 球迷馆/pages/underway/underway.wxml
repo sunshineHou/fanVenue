@@ -1,6 +1,0 @@
-<!--pages/underway/underway.wxml-->
-<template name="underway">
-  <view wx:for="{{array}}"  wx:for-item="j" wx:key='j'>
-    {{j.message}}
-  </view>
-</template>

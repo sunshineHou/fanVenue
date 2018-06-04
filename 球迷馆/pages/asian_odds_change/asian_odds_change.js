@@ -5,7 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    compony_list: [
+      'ManbetX', '皇冠', '易胜博', '188et'
+    ]
   },
 
   /**
@@ -62,5 +64,10 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  compony_list: function (e) {
+    this.setData({
+      currentTab: e.currentTarget.dataset.idx
+    })
   }
 })

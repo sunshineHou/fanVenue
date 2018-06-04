@@ -1,2 +1,161 @@
 <!--pages/match_timetable/match_timetable.wxml-->
-<text>pages/match_timetable/match_timetable.wxml</text>
+<scroll-view scroll-x="true" style="width: 85%; height:119rpx; white-space:nowrap; display:flex">
+  <view class="navbar">  
+    <text wx:for="{{navbar}}" data-idx="{{index}}" style='margin-left:44rpx' class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap"><text class='item_{{index}}'>{{item}}</text></text>  
+  </view>  
+</scroll-view>
+
+<view class="section">
+  <picker mode="date" value="{{date}}" start="{{start_time}}" end="{{end_time}}" bindchange="bindDateChange">
+    <view>
+      <image src='../images/icon_date.png' mode='asfectFit' class='icon_date'></image>
+    </view>
+  </picker>
+</view>
+
+<view hidden="{{currentTab!==0}}">
+  <view wx:for="{{today_data_list}}" wx:for-item="i" wx:key="{{index}}">
+    <view class='box' data-event='{{i}}' bindtap='match_detail'>
+      <view class='left_frame'></view>
+      <view class='frame_top'></view>
+      <view>
+        <text id='match_name'>{{i.match_name}}</text>
+        <text id='start_time'>{{i.match_time}}</text>
+        <text id='proceed_time'>{{i.match_minute}}</text>
+      </view>
+      <view style='position:relative;top:3rpx;height:150rpx'>
+        <text id='main_culb'>{{i.main_club}}</text>
+        <text id='vs_s'>vs</text>
+        <text id='guest_club'>{{i.guest_club}}</text> 
+        <text id='jump_lable'>></text>
+      </view>
+    </view>
+  </view>
+  <view class='frame_top'></view> 
+</view>  
+  
+<view hidden="{{currentTab!==1}}">
+  <view wx:for="{{today_data_list}}" wx:for-item="i" wx:key="{{index}}">
+    <view class='box' data-event='{{i}}' bindtap='match_detail'>
+      <view class='left_frame'></view>
+      <view class='frame_top'></view>
+      <view>
+        <text id='match_name'>{{i.match_name}}</text>
+        <text id='start_time'>{{i.match_time}}</text>
+        <text id='proceed_time'>{{i.match_minute}}</text>
+      </view>
+      <view style='position:relative;top:3rpx;height:150rpx'>
+        <text id='main_culb'>{{i.main_club}}</text>
+        <text id='vs_s'>vs</text>
+        <text id='guest_club'>{{i.guest_club}}</text> 
+        <text id='jump_lable'>></text>
+      </view>
+    </view>
+  </view>
+  <view class='frame_top'></view> 
+</view>  
+  
+<view hidden="{{currentTab!==2}}">
+  <view wx:for="{{today_data_list}}" wx:for-item="i" wx:key="{{index}}">
+    <view class='box' data-event='{{i}}' bindtap='match_detail'>
+      <view class='left_frame'></view>
+      <view class='frame_top'></view>
+      <view>
+        <text id='match_name'>{{i.match_name}}</text>
+        <text id='start_time'>{{i.match_time}}</text>
+        <text id='proceed_time'>{{i.match_minute}}</text>
+      </view>
+      <view style='position:relative;top:3rpx;height:150rpx'>
+        <text id='main_culb'>{{i.main_club}}</text>
+        <text id='vs_s'>vs</text>
+        <text id='guest_club'>{{i.guest_club}}</text> 
+        <text id='jump_lable'>></text>
+      </view>
+    </view>
+  </view>
+  <view class='frame_top'></view> 
+</view>  
+
+<view hidden="{{currentTab!==3}}">
+  <view wx:for="{{today_data_list}}" wx:for-item="i" wx:key="{{index}}">
+    <view class='box' data-event='{{i}}' bindtap='match_detail'>
+      <view class='left_frame'></view>
+      <view class='frame_top'></view>
+      <view>
+        <text id='match_name'>{{i.match_name}}</text>
+        <text id='start_time'>{{i.match_time}}</text>
+        <text id='proceed_time'>{{i.match_minute}}</text>
+      </view>
+      <view style='position:relative;top:3rpx;height:150rpx'>
+        <text id='main_culb'>{{i.main_club}}</text>
+        <text id='vs_s'>vs</text>
+        <text id='guest_club'>{{i.guest_club}}</text> 
+        <text id='jump_lable'>></text>
+      </view>
+    </view>
+  </view>
+  <view class='frame_top'></view> 
+</view>  
+
+<view hidden="{{currentTab!==4}}">
+  <view wx:for="{{today_data_list}}" wx:for-item="i" wx:key="{{index}}">
+    <view class='box' data-event='{{i}}' bindtap='match_detail'>
+      <view class='left_frame'></view>
+      <view class='frame_top'></view>
+      <view>
+        <text id='match_name'>{{i.match_name}}</text>
+        <text id='start_time'>{{i.match_time}}</text>
+        <text id='proceed_time'>{{i.match_minute}}</text>
+      </view>
+      <view style='position:relative;top:3rpx;height:150rpx'>
+        <text id='main_culb'>{{i.main_club}}</text>
+        <text id='vs_s'>vs</text>
+        <text id='guest_club'>{{i.guest_club}}</text> 
+        <text id='jump_lable'>></text>
+      </view>
+    </view>
+  </view>
+  <view class='frame_top'></view> 
+</view>  
+
+<view hidden="{{currentTab!==5}}">
+  <view wx:for="{{today_data_list}}" wx:for-item="i" wx:key="{{index}}">
+    <view class='box' data-event='{{i}}' bindtap='match_detail'>
+      <view class='left_frame'></view>
+      <view class='frame_top'></view>
+      <view>
+        <text id='match_name'>{{i.match_name}}</text>
+        <text id='start_time'>{{i.match_time}}</text>
+        <text id='proceed_time'>{{i.match_minute}}</text>
+      </view>
+      <view style='position:relative;top:3rpx;height:150rpx'>
+        <text id='main_culb'>{{i.main_club}}</text>
+        <text id='vs_s'>vs</text>
+        <text id='guest_club'>{{i.guest_club}}</text> 
+        <text id='jump_lable'>></text>
+      </view>
+    </view>
+  </view>
+  <view class='frame_top'></view> 
+</view>  
+
+<view hidden="{{currentTab!==6}}">
+  <view wx:for="{{today_data_list}}" wx:for-item="i" wx:key="{{index}}">
+    <view class='box' data-event='{{i}}' bindtap='match_detail'>
+      <view class='left_frame'></view>
+      <view class='frame_top'></view>
+      <view>
+        <text id='match_name'>{{i.match_name}}</text>
+        <text id='start_time'>{{i.match_time}}</text>
+        <text id='proceed_time'>{{i.match_minute}}</text>
+      </view>
+      <view style='position:relative;top:3rpx;height:150rpx'>
+        <text id='main_culb'>{{i.main_club}}</text>
+        <text id='vs_s'>vs</text>
+        <text id='guest_club'>{{i.guest_club}}</text> 
+        <text id='jump_lable'>></text>
+      </view>
+    </view>
+  </view>
+  <view class='frame_top'></view> 
+</view>  

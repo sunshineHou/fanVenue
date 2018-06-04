@@ -1,2 +1,25 @@
 <!--pages/asian_odds_change/asian_odds_change.wxml-->
-<text>pages/asian_odds_change/asian_odds_change.wxml</text>
+<view class='nav_top'>
+  <text>公司</text>
+  <text style='margin-left:16%'>主队</text>
+  <text style='margin-left:9%'>盘口</text>
+  <text style='margin-left:9%'>客队</text>
+  <text style='margin-left:11%'>变盘时间</text>
+</view>
+
+<view class='left_nav'>
+  <view wx:for='{{compony_list}}' data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key='index' wx:for-item='i' bindtap="compony_list">
+    <text>{{i}}</text>
+  </view>
+</view>
+
+<view hidden="{{currentTab!==0}}">
+</view>  
+<view hidden="{{currentTab!==1}}">
+</view>  
+<view hidden="{{currentTab!==2}}">
+</view>  
+<view hidden="{{currentTab!==3}}">
+</view>  
+<view hidden="{{currentTab!==4}}">
+</view>  

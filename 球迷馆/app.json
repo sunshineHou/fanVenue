@@ -3,24 +3,16 @@
     "pages/index/index",
     "pages/logs/logs",
 
-    "pages/home_page/home_page",
-    "pages/underway/underway",
     "pages/match_timetable/match_timetable",
     "pages/result_of_the_match/result_of_the_match",
-    "pages/concerns/concerns",
-
     "pages/asian_odds/asian_odds",
-    "pages/european_odds/european_odds",
-    "pages/Size/Size",
-    "pages/record/record",
-
     "pages/asian_odds_change/asian_odds_change",
-    "pages/european_odds_change/european_odds_change"
+    "pages/europe_odds_change/europe_odds_change"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "闪电比分",
     "navigationBarTextStyle":"black"
   }
 }

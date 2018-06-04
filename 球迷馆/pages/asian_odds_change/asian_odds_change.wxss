@@ -1,1 +1,33 @@
 /* pages/asian_odds_change/asian_odds_change.wxss */
+page {
+  background-color: #DDDDDD;
+}
+.nav_top {
+  font-size: 27rpx;
+  color: #9B9B9B;
+  position: relative;
+  top: 8rpx;
+  left: 7.5%
+}
+.left_nav {
+  font-size: 30rpx;
+  color: #9B9B9B;
+  background-color: #fff;
+  margin-top: 14rpx;
+  position: absolute;
+  height:96%;
+  width: 22%;
+  text-align: center;
+  line-height: 80rpx;
+}
+.left_nav .item.active{  
+  color: #EF3B31;  
+}  
+.left_nav .item.active:after{  
+  content: "";  
+  display: block;  
+  position: absolute;
+  width: 3rpx; 
+  height: 100%;
+  background: #EF3B31;  
+}  

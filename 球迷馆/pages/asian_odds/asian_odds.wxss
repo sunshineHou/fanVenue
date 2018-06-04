@@ -1,1 +1,300 @@
 /* pages/asian_odds/asian_odds.wxss */
+page {
+    height: 100%;
+    background-color: #DDDDDD
+}
+.warp {
+    height: 40%;
+    position: relative;
+}
+.warp image {
+    width: 100%;
+    height: 100%;
+}
+#item_seconds {
+    color: #fff;
+    font-size: 30rpx;
+    position: absolute;
+    top: 25%;
+    left: 48%;
+    background-color: rgba(0,0,0,.5)
+}
+#item_score {
+  color: #fff;
+  font-size: 60rpx;
+  position: absolute;
+  top:38%;
+  left: 42%;
+}
+#main_club_img {
+  position: absolute;
+  bottom: 40%;
+  left: 10%;
+  width: 150rpx;
+  height: 155rpx;
+}
+#guest_club_img {
+  position: absolute;
+  bottom: 40%;
+  right: 10%;
+  width: 130rpx;
+  height: 135rpx;
+}
+#main_club_name {
+  position: absolute;
+  top: 72%;
+  left: 10%;
+  color: #fff;
+  font-size: 30rpx;
+}
+#guest_club_name {
+  position: absolute;
+  top: 72%;
+  right: 11%;
+  color: #fff;
+  font-size: 30rpx;
+}
+#foot_profile {
+  font-size: 25rpx;
+  position: absolute;
+  left: 15%;
+  bottom: 10rpx;
+  color: #DDDDDD;
+  white-space: nowrap;
+}
+.navbar{  
+  flex: none;  
+  display: flex;  
+  background: #fff;  
+  padding: 0.5%;
+}  
+.navbar .item{  
+  font-size: 33rpx;
+  position: relative;  
+  flex: auto;  
+  text-align: center;  
+  line-height: 105rpx;
+  color: #9B9B9B;  
+}  
+.navbar .item.active{  
+  color: #EF3B31;  
+}  
+.navbar .item.active:after{  
+  content: "";  
+  display: block;  
+  position: absolute;  
+  top: 80rpx;  
+  left: 43%;
+  width: 20rpx; 
+  height: 20rpx;
+  border-radius: 50%; 
+  background: #EF3B31;  
+}  
+.prompt{
+  color: #9B9B9B;
+  font-size:30rpx;
+  margin-top: 14rpx;
+}
+.odds_s{
+  background-color: #fff;
+  height: 80rpx;
+  width: 93%;
+  margin-top: 1.5%;
+  position: relative;
+  left: 3%;
+  font-size: 25rpx;
+  color: #4A4A4A
+}
+.data_position {
+  margin-top: 1.5%;
+  margin-left:3%;
+  width: 100%;
+}
+.item_name {
+  font-size: 25rpx;
+  position: absolute;
+  top: 32%;
+  text-align: center;
+  width: 130rpx;
+  white-space:nowrap;
+  overflow:hidden; 
+  text-overflow:ellipsis; 
+}
+.segmenting_line_f {
+  color: #DDDDDD;
+  font-size: 40rpx;
+  font-weight: lighter;
+  position: absolute;
+  top: 15%;
+  left: 24%
+}
+.main_first {
+  position: absolute;
+  top: 32%;
+  left: 28.5%;
+}
+.draw_first {
+  position: absolute;
+  top: 32%;   
+  left: 38%;
+}
+.guest_first {
+  position: absolute;
+  top: 32%;
+  left: 50%;
+}
+.segmenting_line_s {
+  color: #DDDDDD;
+  font-size: 40rpx;
+  font-weight: lighter;
+  position: absolute;
+  top: 15%;
+  left: 58.5%
+}
+.main_odds {
+  position: absolute;
+  top: 32%;
+  left: 61%;
+}
+.draw_odds {
+  position: absolute;
+  top: 32%;
+  left: 71%;
+}
+.guest_odds {
+  position: absolute;
+  top: 32%;
+  left: 82%;
+}
+.segmenting_line_t{
+  color: #DDDDDD;
+  font-size: 40rpx;
+  font-weight: lighter;
+  position: absolute;
+  top: 15%;
+  left: 91%
+}
+.jump_nav {
+  color: #DDDDDD;
+  font-size: 35rpx;
+  position: absolute;
+  top: 24%;
+  left: 95.5%;
+}
+.odds_c {
+  color: #93BF25
+}
+#jiang {
+  color: #EF3B31
+}
+.performance_navigation {
+  margin-top: 1.5%;
+  font-size: 26rpx;
+  color: #9B9B9B;
+  height: 45rpx;
+}
+.performance_detail {
+  font-size: 25rpx;
+  color: black;
+  margin-top: 0.5%;
+  background-color: #fff;
+  height: 95rpx;
+}
+.detail_position {
+  height: 95rpx;
+  position: relative;
+  color: #4A4A4A;
+  text-align: center;
+}
+.performance_date {
+  color: #DDDDDD;
+  position: absolute;
+  top: 20%;
+  left: 0.1%;
+  width: 100rpx;
+}
+.performance_matching {
+  position: absolute;
+  top: 34%;
+  left: 14.5%;
+}
+.performance_main {
+  position: absolute;
+  top: 33%;
+  left: 30%;
+  width: 19%;
+  text-align: right;
+  white-space:nowrap;
+  overflow:hidden; 
+  text-overflow:ellipsis;
+}
+.performance_score {
+  position: absolute;
+  top: 33%;
+  left: 52.5%;
+  width: 5.5%;
+}
+.performance_guest {
+  position: absolute;
+  top: 33%;
+  left: 62%;
+  width: 19%;
+  text-align: left;
+  white-space:nowrap; 
+  overflow:hidden; 
+  text-overflow:ellipsis;
+}
+.performance_result {
+  position: absolute;
+  top: 20%;
+  left: 86.5%;
+  width: 10%; 
+}
+.summary_data {
+  color: #4A4A4A;
+  font-size: 25rpx;
+  margin-top: 1.5%;
+  margin-left: 3%;
+  position: relative;
+  height: 80rpx;
+  width: 93%;
+  background-color: #fff;
+}
+.summary_data_item {
+  font-size: 27rpx;
+  position: absolute;
+  left: 5%;
+  top: 30%;
+  width: 14%;
+  white-space: nowrap;
+  overflow:hidden; 
+  text-overflow:ellipsis; 
+}
+.fixed_label {
+  position: absolute;
+  top: 14%;
+  left: 24%;
+  width: 10%;
+}
+.summary_first {
+  position: relative;
+  top: 14%;
+  left: 40%;
+}
+.summary_home {
+  position: absolute;
+  top: 55%;
+  left: 40%;
+}
+.summary_jump {
+  font-size: 40rpx;
+  color: #DDDDDD;
+  position: absolute;
+  top: 16.5%;
+  right: 2%;
+}
+.global_tips {
+  font-size: 27rpx;
+  color: #4A4A4A;
+  margin-top: 1%;
+}

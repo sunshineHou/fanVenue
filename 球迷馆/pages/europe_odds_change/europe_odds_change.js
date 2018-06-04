@@ -1,4 +1,4 @@
-// pages/european_odds/european_odds.js
+// pages/europe_odds_change/europe_odds_change.js
 Page({
 
   /**

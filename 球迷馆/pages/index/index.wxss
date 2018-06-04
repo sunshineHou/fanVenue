@@ -1,7 +1,7 @@
 /**index.wxss**/
 
 page{ 
-  background-color: #C4C4C4;
+  background-color: white;
 }  
 .navbar{  
   flex: none;  
@@ -10,12 +10,12 @@ page{
   padding: 2%;
 }  
 .navbar .item{  
-  font-size: 0.8rem;
+  font-size: 33rpx;
   position: relative;  
   flex: auto;  
   text-align: center;  
   line-height: 80rpx;
-  color: #4A4A4A;  
+  color: #9B9B9B;  
 }  
 .navbar .item.active{  
   color: #EF3B31;  
@@ -37,68 +37,110 @@ font-family: PingFangSC-Regular;
 width: 100%;
 height: 12.9%;
 background-color: #ffffff;
-margin-top: 1.2%;
+top: 1.2%;
 }
 #match_name{
-margin-left: 2%;
+  position: relative;
+  top:8rpx;
+  color: #4A4A4A;
+  margin-left: 2%;
 }
 #start_time {
-  font-weight:200;
-  font-size: 14px;
+  position: relative;
+  top:8rpx;
+  font-weight:250;
+  font-size: 25rpx;
   color: #9b9b9b;
-  padding: 6%;
+  padding-left: 6%;
 }
 #proceed_time {
+  position: relative;
+  top:8rpx;
   font-weight:205;
+  font-size: 25rpx;
   color: #F2625A;
-  padding-left: 5%; 
+  padding-left: 17%; 
 } 
 .odds {
-  font-weight:300;
-  padding-left:38.5%; 
+  font-weight:325;
+  padding-left:40.5%; 
   color: #9b9b9b;
-  font-size: 17px;
+  font-size: 27rpx;
 }
 #score {
   position: absolute;
   color: #EF3B31;
   left: 41.4%;
-  font-size: 18px;
+  font-size: 35rpx;
 }
 #main_culb {
   font-size: 14px;
   float: right;
   color: #4A4A4A;
+  text-align: right;
   margin-right: 61.5%;
-  margin-top: 3px;
+  margin-top: 1%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+  width: 28%;
 }
 #guest_club {
   position: absolute;
   left: 54%;
   color: #4A4A4A;
   font-size: 14px;
-  margin-top: 3px;
+  margin-top: 1%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+  width: 30%;
 }
-#mainViolationCount{
-  position: relative;
-  float: left;
-  margin-left: 4%;
+#mainViolationCountRed{
+  position: absolute;
+  left: 4%;
   font-size: 13px;
-  margin-top: 4px;
   color: white;
   border-radius: 20%;
   width: 10px;
+  height: 16px;
+  margin-top:1%;
   text-align: center;
   background-color: #FF8A8A; 
 }
-#guestviolationCount{
+#mainViolationCountYellow{
   position: absolute;
-  right: 9%;
+  left: 7%;
   font-size: 13px;
-  margin-top: 4px;
   color: white;
   border-radius: 20%;
   width: 10px;
+  height: 16px;
+  margin-top:1%;
+  text-align: center;
+  background-color: #FDC223; 
+}
+#guestviolationCountRed{
+  position: absolute;
+  right: 11%;
+  font-size: 13px;
+  color: white;
+  border-radius: 20%;
+  width: 10px;
+  height: 16px;
+  margin-top:1%;
+  text-align: center;
+  background-color: #FF8A8A;
+}
+#guestviolationCountYellow{
+  position: absolute;
+  right: 8%;
+  font-size: 13px;
+  color: white;
+  border-radius: 20%;
+  width: 10px;
+  height: 16px;
+  margin-top:1%;
   text-align: center;
   background-color: #FDC223;
 }
@@ -119,11 +161,27 @@ margin-left: 2%;
   margin-left: 3%;
   color: #9B9B9B;
 }
+.frame_top {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0.8%;
+  background-color: #DDDDDD;
+}
 .left_frame{
   position: absolute;
   left: 0;
-  width: 1.1%;
-  height: 12%;
-  margin-top: 1%;
+  width: 0.8%;
+  height: 11%;
+  margin-top: 2%;
   background-color: #EF3B31;
+}
+.ThirdPage{
+  width: 100%;
+  height: 100%;
+  background-color: black
+}
+.empty_img{
+  margin-top: 30%;
+  margin-left: 42%;
 }

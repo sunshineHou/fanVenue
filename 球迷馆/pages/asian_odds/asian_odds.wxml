@@ -1,2 +1,132 @@
 <!--pages/asian_odds/asian_odds.wxml-->
-<text>pages/asian_odds/asian_odds.wxml</text>
+ <view class='warp'>
+  <image src='../images/green_field.png'></image>
+  <text id='item_seconds'>{{NumberOfSeconds}}</text> 
+  <text id="item_score">{{MatchScore}}</text>
+  <image src='../images/RealMadrid.png' mode='aspectFit' id='main_club_img'></image>
+  <text id='main_club_name'>{{main_club_name}}</text>
+  <image src='../images/Barcelona.png' mode='aspectFit' id='guest_club_img'></image>
+  <text id='guest_club_name'>{{guest_club_name}}</text>
+  <view id='foot_profile'>
+    <text>捷U21 </text>
+    <text style='margin-left:3%'>第二轮 </text>
+    <text style='margin-left:5%'>比赛时间: 2018-05-30</text>
+    <text style='margin-left:3%'>15:00</text>
+  </view>
+</view>   
+
+<view class="navbar">
+  <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap" data-id="{{item}}">{{item}}</text>  
+</view>
+
+<view hidden="{{currentTab!==0}}">
+  <view class='prompt'>
+    <text style='margin-left:12%'>公司</text>
+    <text style='margin-left:19%'>初盘</text>
+    <text style='margin-left:21%'>即时盘</text>
+  </view> 
+  <view wx:for="{{asian_odds_list}}" wx:key='index' class='odds_s'>
+    <view class='data_position' data-detail='{{item}}' bindtap='asian_odds'>
+      <view class='item_name'>{{item.name}}</view>
+      <view class='segmenting_line_f'>|</view>
+      <view class='main_first'>{{item.main_first_home_odds}}</view>
+      <view class='draw_first'>{{item.draw_first_home_odds}}</view>
+      <view class='guest_first'>{{item.guest_first_home_odds}}</view>
+      <view class='segmenting_line_s'>|</view>
+      <view class='odds_c'>
+        <view class='main_odds'>{{item.main_home_odds}}</view>
+        <view class='draw_odds'>{{item.draw_home_odds}}</view>
+        <view class='guest_odds'>{{item.guest_home_odds}}</view>
+      </view>
+      <view class='segmenting_line_t'>|</view>
+      <view class='jump_nav'>></view>
+    </view>
+  </view>
+</view>   
+
+<view hidden="{{currentTab!==1}}">   
+  <view wx:for='{{summary_data}}' wx:key='index' class='summary_data'>
+    <text class='summary_data_item'>{{summary_data_item[index]}}</text>
+    <text class='fixed_label'>初盘即盘</text>
+    <view class='summary_first'>
+      <text>{{item.main_first_home_odds}}</text>
+      <text style='margin-left:14%'>{{item.draw_first_home_odds}}</text>
+      <text style='margin-left:14%'>{{item.guest_first_home_odds}}</text>
+    </view>
+    <view class='summary_home'>
+      <text>{{item.main_home_odds}}</text>
+      <text style='margin-left:105%'>{{item.draw_home_odds}}</text>
+      <text style='margin-left:97%'>{{item.guest_home_odds}}</text>
+    </view>
+    <text class='summary_jump'>></text>
+  </view>
+  <view class='global_tips'>
+    <text style='margin-left:9%'>公司</text>
+    <text style='margin-left:23%'>主胜</text>
+    <text style='margin-left:11.5%'>平局</text>
+    <text style='margin-left:11.5%'>客胜</text>
+  </view>
+  <view wx:for='{{european_odds_list}}' wx:key='index' class='summary_data'>
+    <view data-detail='{{item}}' bindtap='asian_odds'>
+      <text class='summary_data_item'>{{item.company_name}}</text>
+      <text class='fixed_label'>初盘即盘</text>
+      <view class='summary_first'>
+        <text>{{item.main_first_home_odds}}</text>
+        <text style='margin-left:17%'>{{item.draw_first_home_odds}}</text>
+        <text style='margin-left:14%'>{{item.guest_first_home_odds}}</text>
+      </view>
+      <view class='summary_home'>
+        <text>{{item.main_home_odds}}</text>
+        <text style='margin-left:105%'>{{item.draw_home_odds}}</text>
+        <text style='margin-left:97%'>{{item.guest_home_odds}}</text>
+      </view>
+      <text class='summary_jump'>></text>
+    </view>
+  </view>
+</view>   
+
+<view hidden="{{currentTab!==2}}">   
+  <view class='prompt'>
+    <text style='margin-left:12%'>公司</text>
+    <text style='margin-left:19%'>初盘</text>
+    <text style='margin-left:21%'>即时盘</text>
+  </view> 
+  <view wx:for="{{asian_odds_list}}" wx:key='index' class='odds_s'>
+    <view class='data_position' data-detail='{{item}}' bindtap='asian_odds'>
+      <view class='item_name'>{{item.name}}</view>
+      <view class='segmenting_line_f'>|</view>
+      <view class='main_first'>{{item.main_first_home_odds}}</view>
+      <view class='draw_first'>{{item.draw_first_home_odds}}</view>
+      <view class='guest_first'>{{item.guest_first_home_odds}}</view>
+      <view class='segmenting_line_s'>|</view>
+      <view class='odds_c'>
+        <view class='main_odds'>{{item.main_home_odds}}</view>
+        <view class='draw_odds'>{{item.draw_home_odds}}</view>
+        <view class='guest_odds'>{{item.guest_home_odds}}</view>
+      </view>
+      <view class='segmenting_line_t'>|</view>
+      <view class='jump_nav'>></view>
+    </view>
+  </view> 
+</view>   
+
+<view hidden="{{currentTab!==3}}">  
+    <view class='performance_navigation'>
+      <text style='margin-left:3%'>日期</text>
+      <text style='margin-left:5%'>赛事</text>
+      <text style='margin-left:14%'>主队</text>
+      <text style='margin-left:10%'>比分</text>
+      <text style='margin-left:10%'>客队</text>
+      <text style='margin-left:12%'>盘路</text>
+    </view>
+    <view wx:for='{{performance_detail_list}}' wx:key='index' class='performance_detail'>
+      <view class='detail_position' data-detail='{{item}}' bindtap='asian_odds'>
+        <text class='performance_date'>{{item.date}}</text>
+        <text class='performance_matching'>{{item.matching}}</text>
+        <text class='performance_main'>{{item.main_club}}</text>
+        <text class='performance_score'>{{item.score}}</text>
+        <text class='performance_guest'>{{item.guest_club}}</text>
+        <text class='performance_result'>{{item.result}}</text>
+      </view>
+    </view>
+</view>

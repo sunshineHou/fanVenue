@@ -1,14 +1,14 @@
 <!--index.wxml-->
 
-<view class="navbar">  
-  <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>  
-</view>  
+<view class="navbar">
+  <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap" data-id="{{item}}">{{item}}</text>  
+</view>
 
 <view hidden="{{currentTab!==0}}">
-  <view wx:for="{{home_page_array}}" wx:for-item="i" wx:key="i">
-    <view class='box'>
+  <view wx:for="{{home_page_array}}" wx:for-item="i" wx:key="{{index}}">
+    <view class='box' data-event='{{i}}' bindtap='match_odds'>
       <view class='left_frame'></view>
-      <view class='top_frame'></view>      
+      <view class='frame_top'></view>
       <view>
         <text id='match_name'>{{i.match_name}}</text>
         <text id='start_time'>{{i.match_time}}</text>
@@ -18,12 +18,14 @@
         <text>{{i.main_odds}} / {{i.guest_odds}}</text>
       </view>
       <view>
-        <text id='mainViolationCount'>{{i.mainViolationCount}}</text>
+        <text id='mainViolationCountRed'>{{i.mainViolationCountRed}}</text>
+        <text id='mainViolationCountYellow'>{{i.mainViolationCountYellow}}</text>
         <text id='main_culb'>{{i.main_club}}</text>
         <text id='score'>{{i.score}}</text>
         <text id='guest_club'>{{i.guest_club}}</text>
-        <text id='guestviolationCount'>{{i.guestviolationCount}}</text>
-        <image class='star_img' src='../images/icon_star_gray.png' mode='aspectFit'></image>
+        <text id='guestviolationCountRed'>{{i.guestviolationCountRed}}</text>
+        <text id='guestviolationCountYellow'>{{i.guestviolationCountYellow}}</text>
+        <image class='star_img' src='{{i.img_path}}' mode='aspectFit' bindtap='img_change' data-item="{{i}}"></image>
       </view>
       <view>
         <text id='half_count'>半：{{i.half_count}}</text>   
@@ -31,13 +33,14 @@
       </view>
     </view>
   </view>
+<view class='frame_top'></view> 
 </view>  
   
 <view hidden="{{currentTab!==1}}">  
-  <view wx:for="{{underway_array}}" wx:for-item="i" wx:key="i">
-    <view class='box'>
-      <view class='left_frame'></view>
-      <view class='top_frame'></view>      
+  <view wx:for="{{underway_array}}" wx:for-item="i" wx:key="index">
+    <view class='box' data-event='{{i}}' bindtap='match_odds'>
+      <view class='left_frame'></view>    
+      <view class='frame_top'></view>   
       <view>
         <text id='match_name'>{{i.match_name}}</text>
         <text id='start_time'>{{i.match_time}}</text>
@@ -47,12 +50,14 @@
         <text>{{i.main_odds}} / {{i.guest_odds}}</text>
       </view>
       <view>
-        <text id='mainViolationCount'>{{i.mainViolationCount}}</text>
+        <text id='mainViolationCountRed'>{{i.mainViolationCountRed}}</text>
+        <text id='mainViolationCountYellow'>{{i.mainViolationCountYellow}}</text>
         <text id='main_culb'>{{i.main_club}}</text>
         <text id='score'>{{i.score}}</text>
         <text id='guest_club'>{{i.guest_club}}</text>
-        <text id='guestviolationCount'>{{i.guestviolationCount}}</text>
-        <image class='star_img' src='../images/icon_star_gray.png' mode='aspectFit'></image>
+        <text id='guestviolationCountRed'>{{i.guestviolationCountRed}}</text>
+        <text id='guestviolationCountYellow'>{{i.guestviolationCountYellow}}</text>
+        <image class='star_img' src='{{i.img_path}}' mode='aspectFit' bindtap='img_change' data-item="{{i}}"></image>
       </view>
       <view>
         <text id='half_count'>半：{{i.half_count}}</text>   
@@ -60,16 +65,43 @@
       </view>
     </view>
   </view>
+<view class='frame_top'></view> 
 </view>  
     
-<view hidden="{{currentTab!==2}}">  
-  <view bindtap='match_timetable_page'></view>
+<view hidden="{{currentTab!==2}}" class='ThirdPage'>  
 </view>    
     
-<view hidden="{{currentTab!==3}}">  
-  tab_04  
+<view hidden="{{currentTab!==3}}">    
 </view>    
     
-<view hidden="{{currentTab!==4}}">  
-  tab_05  
+<view hidden="{{currentTab!==4}}">
+  <view wx:for="{{underway_array}}" wx:for-item="i" wx:key="index">
+    <view class='box' data-event='{{i}}' bindtap='match_odds'>
+      <view class='left_frame'></view>    
+      <view class='frame_top'></view>   
+      <view>
+        <text id='match_name'>{{i.match_name}}</text>
+        <text id='start_time'>{{i.match_time}}</text>
+        <text id='proceed_time'>{{i.match_minute}}</text>
+      </view>
+      <view class='odds'>
+        <text>{{i.main_odds}} / {{i.guest_odds}}</text>
+      </view>
+      <view>
+        <text id='mainViolationCountRed'>{{i.mainViolationCountRed}}</text>
+        <text id='mainViolationCountYellow'>{{i.mainViolationCountYellow}}</text>
+        <text id='main_culb'>{{i.main_club}}</text>
+        <text id='score'>{{i.score}}</text>
+        <text id='guest_club'>{{i.guest_club}}</text>
+        <text id='guestviolationCountRed'>{{i.guestviolationCountRed}}</text>
+        <text id='guestviolationCountYellow'>{{i.guestviolationCountYellow}}</text>
+        <image class='star_img' src='{{i.img_path}}' mode='aspectFit' bindtap='img_change' data-item="{{i}}"></image>
+      </view>
+      <view>
+        <text id='half_count'>半：{{i.half_count}}</text>   
+        <text id='corner_all'>角: {{i.horn}}</text> 
+      </view>
+    </view>
+  </view>
+<view class='frame_top'></view> 
 </view>  
